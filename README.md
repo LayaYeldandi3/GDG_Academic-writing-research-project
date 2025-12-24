@@ -65,17 +65,3 @@ The application is divided into five autonomous modules (Agents), each responsib
 4. **Run the Application**
    ```bash
    streamlit run app.py
-
-🧠 **Architecture Flow**
-
-   **Input:** User defines a research topic.
-   
-   **Search:** System queries arXiv -> Fetches Top N Papers.
-   
-   **Process:** Llama-3.3 reads abstracts -> Outputs JSON-structured Knowledge Base.
-   
-   **Analyze:** System processes Data (CSV) -> Generates Stats & Insights.
-   
-   **Synthesize:** Gemini-2.5 takes [Knowledge Base + Hypothesis + Data Insights] -> Generates Full Paper.
-   
-   **Export:** Result is compiled into a PDF.
