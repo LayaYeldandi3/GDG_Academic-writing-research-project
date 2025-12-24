@@ -53,23 +53,29 @@ The application is divided into five autonomous modules (Agents), each responsib
    ```bash
    git clone [https://github.com/your-username/scholar-bot.git](https://github.com/your-username/scholar-bot.git)
    cd scholar-bot
+   
+2. **Install Dependencies**
+   ```bash
+   pip install streamlit requests arxiv pandas groq fpdf google-genai PyPDF2
+   
+3. **Configure API Keys** : Open the app.py file and replace the placeholder keys with your actual credentials:
+   GROQ_API_KEY = "your_groq_key_here"
+   GEMINI_API_KEY = "your_gemini_key_here"
 
-pip install streamlit requests arxiv pandas groq fpdf google-genai PyPDF2
+4. **Run the Application**
+   ```bash
+   streamlit run app.py
 
-GROQ_API_KEY = "your_groq_key_here"
-GEMINI_API_KEY = "your_gemini_key_here"
+🧠 **Architecture Flow**
 
-streamlit run app.py
-
-🧠 Architecture Flow
-Input: User defines a research topic.
-
-Search: System queries arXiv -> Fetches Top N Papers.
-
-Process: Llama-3.3 reads abstracts -> Outputs JSON-structured Knowledge Base.
-
-Analyze: System processes Data (CSV) -> Generates Stats & Insights.
-
-Synthesize: Gemini-2.5 takes [Knowledge Base + Hypothesis + Data Insights] -> Generates Full Paper.
-
-Export: Result is compiled into a PDF.
+   **Input:** User defines a research topic.
+   
+   **Search:** System queries arXiv -> Fetches Top N Papers.
+   
+   **Process:** Llama-3.3 reads abstracts -> Outputs JSON-structured Knowledge Base.
+   
+   **Analyze:** System processes Data (CSV) -> Generates Stats & Insights.
+   
+   **Synthesize:** Gemini-2.5 takes [Knowledge Base + Hypothesis + Data Insights] -> Generates Full Paper.
+   
+   **Export:** Result is compiled into a PDF.
