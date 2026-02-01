@@ -4,6 +4,7 @@ arxiv
 pandas
 groq
 fpdf
-google-generativeai
+google-genai
 PyPDF2
 python-dotenv
+
