@@ -1,0 +1,9 @@
+streamlit
+requests
+arxiv
+pandas
+groq
+fpdf
+google-generativeai
+PyPDF2
+python-dotenv
