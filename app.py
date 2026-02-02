@@ -13,9 +13,15 @@ import PyPDF2
 # 1. CONFIGURATION & CREDENTIALS
 # ==========================================
 # 🔴 REPLACE WITH YOUR ACTUAL KEYS
-GROQ_API_KEY = "YOUR_GROQ_API_KEY_HERE" 
-GEMINI_API_KEY = "YOUR_GEMINI_API_KEY_HERE" 
-USER_EMAIL = "YOUR EMAIL HERE (for OpenAlex API)" 
+# GROQ_API_KEY = "YOUR_GROQ_API_KEY_HERE" 
+# GEMINI_API_KEY = "YOUR_GEMINI_API_KEY_HERE" 
+# USER_EMAIL = "YOUR EMAIL HERE (for OpenAlex API)" 
+import os
+
+GROQ_API_KEY = os.getenv("GROQ_API_KEY")
+GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
+USER_EMAIL = os.getenv("USER_EMAIL")
+
 
 # Initialize Clients
 groq_client = Groq(api_key=GROQ_API_KEY)
